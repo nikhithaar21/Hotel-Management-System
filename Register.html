@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HOTEL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        .form-group{
+        width:300px}
+        .container{
+  color:black;
+  background-color: black;
+  padding-top: 80px;
+	max-width:500px;
+	width:80%;
+	background:transparent;
+	padding:10px 40px;
+	border:5px solid rgba(19, 2, 2, 0.5);
+	backdrop-filter:blur(20px);
+	padding:10px 40px;
+}
+</style>
+    <script>
+        function fun(){
+        var a=f1.t1.value;
+        var b=f1.t2.value;
+        var c=f1.t3.value;
+        var d=f1.t4.value;
+        var e=f1.t5.value;
+        var f=f1.t6.value;
+        var g=f1.t7.value;
+        if(a==""){
+          alert("name is empty");
+          f1.t1.focus();
+        }
+      else if(b ==""){
+        alert(" last name is empty");
+        f1.t2.focus();
+      }
+      else if(c=="")
+      {
+        alert("  email is empty");
+        f1.t3.focus();
+      }
+      else if(d=="")
+      {
+        alert("  phone number is empty");
+        f1.t4.focus();
+      }
+      else if(d.length!==10)
+      {
+        alert("enter 10 digit phone number")
+      }
+      else if(e=="")
+      {
+        alert("  date of birth is empty");
+        f1.t5.focus();
+      }
+      else if(f=="")
+      {
+        alert("  gender is empty");
+        f1.t6.focus();
+      }
+      else if(g=="")
+      {
+        alert("  address is empty");
+        f1.t7.focus();
+      }
+      else {
+    
+        alert("Form submitted succesfully")
+      }
+      }
+      </script>
+      <script>
+        function adddata(){
+       localStorage.setItem("Firstname",document.getElementById("t1").value);
+       localStorage.setItem("lastname",document.getElementById("t2").value);
+       localStorage.setItem("email",document.getElementById("t3").value);
+       localStorage.setItem("phone",document.getElementById("t4").value);
+       localStorage.setItem("date",document.getElementById("t5").value);
+       localStorage.setItem("gender",document.getElementById("t6").value);
+       
+
+       localStorage.setItem("address",document.getElementById("t7").value);
+        }
+        function dataview(){
+        document.write("First Name :"+localStorage.Firstname);
+        document.write("<br>");
+        document.write("Last Name :"+localStorage.lastname);
+        document.write("<br>");
+        document.write("Email :"+localStorage.email);  
+        document.write("<br>");
+        document.write("Phone Number :"+localStorage.phone);  
+        document.write("<br>");
+        document.write("date of birth :"+localStorage.date);  
+        document.write("<br>");
+        document.write("Gender :"); 
+        document.write("<br>");
+        document.write("Address :"+localStorage.address);
+      }
+      </script>
+</head>
+
+<link rel="stylesheet" href="main.css">
+
+
+<body style="background-color: antiquewhite;background-size:cover">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">HOTEL</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="home.html"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+
+            <li class="active"><a href="register.html">Register</a></li>
+            <li><a href="pricelist.html">Price List</a></li>
+            <li><a href="booking.html">Hotel Booking</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="Register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="container">
+        <h3>SIGN UP</h3>
+        <form  role=form action=second name=f1>
+         <table>
+          <div class="form-group">
+            <label for="email">First Name:</label>
+            <input type="text" class="form-control" name="t1" id="t1" placeholder="Enter First name" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="name">Last Name:</label>
+            <input type="text" class="form-control" name="t2" id="t2" placeholder="Enter Second name" required>
+          </div>
+           
+          <div class="form-group">
+            <label>Email:</label>
+            <input type="email" class="form-control" name="t3" id="t3" placeholder="Enter email" required>
+          </div>
+      
+          <div class="form-group">
+            <label>Phone Number:</label>
+            <input type="number" class="form-control" name="t4" id="t4" placeholder="Enter Phone Number" required>
+          </div>
+          <div class="form-group">
+            <label for="name">Date of Birth:</label>
+            <input type="date" class="form-control" name="t5" id="t5" required>
+          </div>
+      
+         <div class="form-group">
+            <label>Gender:</label>
+            <label><input type="radio" name="t6" id="t6">Male</label>
+            <label><input type="radio" name="t6" id="t6">Female</label>
+          </div>
+      
+          <div class="form-group">
+            <label for="comment">Address:</label>
+            <textarea class="form-control" rows="4" name="t7" id="t7" placeholder="Enter Full Address" required></textarea>
+          </div> 
+      
+          <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+          </div>
+      
+      <button type="button" class="btn btn-success" onclick=fun() >Submit</button>
+      <button type="button" class="btn btn-primary" style="margin-left: 20px;" onclick="adddata()">Store Data</button>
+      <button type="button" class="btn btn-link" onclick="dataview()">view your data</button>
+      </table>
+        </form></div></body></html>

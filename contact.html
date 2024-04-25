@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HOTEL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .form-group {
+            width: 400px;
+        }
+
+        .container {
+           color:beige;
+            margin: auto;
+            max-width: 900px;
+            width: 80%;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, .5);
+            backdrop-filter: blur(20px);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .form-container {
+            flex: 1;
+            margin-right: 20px; /* Adjust spacing */
+        }
+
+        .contact-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    <script>
+        function fun() {
+            var a = f1.t1.value;
+            var b = f1.t2.value;
+            var c = f1.t3.value;
+            var g = f1.t4.value;
+            if (a == "") {
+                alert("Name is empty");
+                f1.t1.focus();
+            } else if (b == "") {
+                alert("Email is empty");
+                f1.t2.focus();
+            } else if (c == "") {
+                alert("Phone number is empty");
+                f1.t3.focus();
+            } else if (c.length != 10) {
+                alert("Enter a 10-digit phone number");
+                f1.t3.focus();
+            } else if (g == "") {
+                alert("Comment is empty");
+                f1.t4.focus();
+            } else {
+                alert("Form submitted");
+            }
+        }
+    </script>
+</head>
+
+<body style="background:url('./pool.jpg');background-size:cover">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">HOTEL</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="home.html"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+
+            <li ><a href="register.html">Register</a></li>
+            <li><a href="pricelist.html">Price List</a></li>
+            <li><a href="booking.html">Hotel Booking</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li class="active"><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="Register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Send us a message</h2>
+            <form role="form" action=second name=f1>
+                <div class="form-group">
+                    <label for="name">Enter Name:</label>
+                    <input type="text" class="form-control" name="t1" id="t1" placeholder="Enter  name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="t2" id="t2" placeholder="Enter email">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Phone Number:</label>
+                    <input type="number" class="form-control" name="t3" id="t3" placeholder="Enter Phone Number">
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Comments:</label>
+                    <textarea class="form-control" rows="5" name="t4" id="t4" placeholder="Enter your message"></textarea>
+                </div>
+
+                <button type="button" class="btn btn-danger" onclick=fun()>Submit</button>
+            </form>
+        </div>
+
+        <div class="contact-container">
+            <div>
+              <h2>Address</h2>
+                <i class="fas fa-map-marker-alt"></i>
+                <p> Windsor Square, 25,<br> Golf Course Road,<br> Bengaluru, Karnataka 560052</p>
+            </div>
+            <div>
+                <i class="fas fa-phone"></i>
+                <h2>Phone</h2>
+                <p>080 2226 9898</p>
+            </div>
+
+            <div>
+                <i class="fas fa-envelope"></i>
+                <h2>Email</h2>
+                <p>reservations@itchotel.in</p>
+            </div>
+            <div>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6518575452938!2d77.58341762385521!3d12.99410498732328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1640b976be87%3A0x7ab29f2e655f7f7d!2sITC%20WINDSOR%2C%20Abshot%20Layout%2C%20Vasanth%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560051!5e0!3m2!1sen!2sin!4v1703241987506!5m2!1sen!2sin" width="200" height="200" style="border:10;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

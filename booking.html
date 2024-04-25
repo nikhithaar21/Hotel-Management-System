@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HOTEL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .form-group {
+            width: 400px
+        }
+
+        .container {
+            color: antiquewhite;
+            max-width: 500px;
+            width: 100%;
+            background: transparent;
+            padding: 05px 40px;
+            border: 2px solid rgba(255, 255, 255, .5);
+            backdrop-filter: blur(20px);
+            padding: 05px 40px;
+        }
+    </style>
+    <script>
+        function fun() {
+            var a = f1.t1.value;
+            var b = f1.t2.value;
+            var c = f1.t3.value;
+            var d = f1.t4.value;
+            var e = f1.t5.value;
+            var f = f1.t6.value;
+            
+
+            if (a === "") {
+                alert("name is empty");
+                f1.t1.focus();
+            } else if (b === "") {
+                alert("checkin date is empty");
+                f1.t2.focus();
+            } else if (c === "") {
+                alert("checkout is empty");
+                f1.t3.focus();
+            
+            } else if (d === "") {
+                alert("Select room");
+                f1.t4.focus();
+            } else if (e === "") {
+                alert("provide a number");
+                f1.t5.focus();
+            } else if (f === "") {
+                alert("Mention any special requests");
+                f1.t6.focus();
+            
+            }
+             else {
+                alert("form submitted");
+            }
+        }
+
+        function add() {
+            localStorage.setItem("name", document.getElementById("t1").value);
+            localStorage.setItem("Checkin", document.getElementById("t2").value);
+            localStorage.setItem("Checkout", document.getElementById("t3").value);
+            localStorage.setItem("Room", document.getElementById("t4").value);
+            localStorage.setItem("guests", document.querySelector("t5").value);
+            localStorage.setItem("request", document.querySelector("t6").value);
+            
+        }
+    </script>
+</head>
+
+<body style="background:url('./booking3.jpg');background-size:cover">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">HOTEL</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="home.html"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+
+            <li ><a href="register.html">Register</a></li>
+            <li><a href="pricelist.html">Price List</a></li>
+            <li class="active"><a href="booking.html">Hotel Booking</a></li>
+           
+            
+            <li ><a href="feedback.html">Feedback</a></li>
+            <li ><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="Registration.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </nav>
+
+<div class="container">
+    <h2><u>Booking</u></h2>
+    <form role="form" action=second name=f1>
+        <table>
+            <div class="form-group">
+                <label for="name">Enter Name:</label>
+                <input type="text" class="form-control" name="t1" id="t1" placeholder="Enter  name">
+            </div>
+
+            <div class="form-group">
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" class="form-control" name="t2" id="t2" >
+            </div>
+
+            <div class="form-group">
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" class="form-control" name="t3" id="t3">
+            </div>
+
+            <div class="form-group">
+                <label for="room-type">Select Room Type</label>
+                <select class="form-control" id="t4" name="t4">
+                <option>Standard Room</option>
+                <option>Delux Room</option>
+                <option>Suite</option>
+              </select>
+                
+            </div>
+
+            <div class="form-group">
+                <label for="num-guests">Number of Guests</label>
+                <input type="number" class="form-control" name="t5" id="t5">
+                
+            </div>
+
+            <div class="form-group">
+                <label for="special-requests">Special Requests</label>
+                <textarea class="form-control" rows="5" name="t7" id="t7" ></textarea>
+            </div>
+
+            <button type="button" class="btn btn-danger" onclick="fun()">Submit</button>
+            <button type="reset" class="btn btn-primary" onclick="add()" style="margin-left: 22px">Reset</button>
+            
+        </table>
+    </form>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</div>
+</body>
+</html>

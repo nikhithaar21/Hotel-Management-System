@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HOTEL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .form-group {
+            width: 400px;
+        }
+
+        .container {
+            color: antiquewhite;
+            max-width: 500px;
+            width: 100%;
+            background: transparent;
+            padding: 5px 40px;
+            border: 2px solid rgba(255, 255, 255, .5);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+    <script>
+        function fun() {
+            
+            var a = f1.t1.value;
+            var b = f1.t2.value;
+            var c = f1.t3.value;
+            var d = f1.t4.value;
+            var e = f1.t5.value;
+            var f = f1.t6.value;
+            var g = f1.t7.value;
+
+            if (a === "") {
+                alert("name is empty");
+                f1.t1.focus();
+            } else if (b === "") {
+                alert("email is empty");
+                f1.t2.focus();
+            } else if (c === "") {
+                alert("phone number is empty");
+                f1.t3.focus();
+            } else if (c.length !== 10) {
+                alert("enter 10 digit phone number");
+                f1.t3.focus();
+            } else if (d === "") {
+                alert("date is empty");
+                f1.t4.focus();
+            } else if (e === "") {
+                alert("gender is empty");
+                f1.t5.focus();
+            } else if (f === "") {
+                alert("feedback is empty");
+                f1.t6.focus();
+            } else if (g === "") {
+                alert("feedback comment is empty");
+                f1.t7.focus();
+            } else {
+                alert("form submitted");
+            }
+        }
+
+        
+    </script>
+</head>
+<link rel="stylesheet" href="main.css">
+<body style="background:url('feedback1.jpg');background-size:cover">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">HOTEL</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="home.html"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+    
+                <li class="active"><a href="register.html">Register</a></li>
+                <li><a href="pricelist.html">Price List</a></li>
+                <li><a href="booking.html">Hotel Booking</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="Register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </div>
+        </nav>
+
+    <div class="container">
+        <h2><u>Feedback Form</u></h2>
+        <form role="form" action=second name=f1>
+           
+            <table>
+                <div class="form-group">
+                    <label for="name">Enter Name:</label>
+                    <input type="text" class="form-control" name="t1" id="t1" placeholder="Enter  name">
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="t2" id="t2" placeholder="Enter email">
+                </div>
+    
+                <div class="form-group">
+                    <label for="name">Phone Number:</label>
+                    <input type="number" class="form-control" name="t3" id="t3" placeholder="Enter Phone Number">
+                </div>
+    
+                <div class="form-group">
+                    <label for="name">Enter today Date:</label>
+                    <input type="date" class="form-control" name="t4" id="t4">
+                </div>
+    
+                <div class="form-group">
+                    <label for="Gender">Gender:</label>
+                    <label><input type="radio" name="t5" id="t5">Male<ion-icon name="male-outline"></ion-icon></label>
+                    <label><input type="radio" name="t5" id="t5">Female<ion-icon name="female-outline"></ion-icon></label>
+                </div>
+    
+                <div class="form-group">
+                  <label for="feedback">Select your Feedback:</label>
+                  <select class="form-control" name="t6" id="t6">
+                      <option value="Excellent">5-Excellent</option>
+                      <option value="Good">4-Good</option>
+                      <option value="Average">3-Average</option>
+                      <option value="Average">2-Fair</option>
+                      <option value="Poor">1-Poor</option>
+                  </select>
+              </div>
+    
+                <div class="form-group">
+                    <label for="comment">Enter your Feedback:</label>
+                    <textarea class="form-control" rows="5" name="t7" id="t7" placeholder="Enter your Feedback"></textarea>
+                </div>
+    
+                <button type="button" class="btn btn-danger" onclick="fun()">Submit</button>
+                <button type="reset" class="btn btn-primary" onclick="add()" style="margin-left: 22px">Reset</button>
+               
+            </table>
+        </form>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </div>
+</body>
+</html>

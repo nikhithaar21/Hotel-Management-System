@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AIRLINES</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function fun(){
+            var a=f1.t1.value;
+            var b=f1.t2.value;
+            if(a==""){
+                alert("Plese fill the Email ");
+                f1.t1.focus();
+            }
+            else if(b==""){
+                alert("Plese fill the password ");
+                f1.t2.focus();
+            }
+            else{
+                alert("Login Successfully!");
+            }
+        }
+    </script>
+    <style>
+        .form-group{
+        width:400px}
+        .container{
+            
+	max-width:500px;
+	width:100%;
+	background:transparent;
+	padding:05px 40px 05px;
+	border:5px solid rgba(10, 40, 234, 0.5);
+	backdrop-filter:blur(10px);
+	padding:05px 40px;
+}
+        </style>
+</head>
+
+<link rel="stylesheet" href="main.css">
+
+
+<body style="background-color: antiquewhite;background-size:cover">
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">HOTEL</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="home.html"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+    
+                <li class="active"><a href="register.html">Register</a></li>
+                <li><a href="pricelist.html">Price List</a></li>
+                <li><a href="booking.html">Hotel Booking</a></li>
+                
+                
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="Register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </div>
+        </nav>
+    <div class="container">
+        <form role="form" action=second name=f1>
+            <table>
+             <div class="form-group">
+               <label for="name" style="margin-top: 30px;">Email:</label>
+               <input type="email" class="form-control"  name="t1" placeholder="email@gmail.com">
+             </div>
+              
+             <div class="form-group">
+               <label for="password">Password:</label>
+               <input type="password" class="form-control" name="t2" placeholder="Enter password">
+             </div>
+             <button type="button" class="btn btn-success" onclick=fun()>Submit</button>
+             <button type="button" class="btn btn-default" style="margin-left: 20px;" onclick="document.location='home.html'">Cancel</button>
+            </table><br>
+            <label>Do not have an account click</label>
+            <a href="Registration.html">sign up</a>
+            </form>
+</body></html>
